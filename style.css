@@ -15,6 +15,7 @@
 
 body {
   font-family: Lato, Helvetica, sans-serif;
+  min-width: 500px;
 }
 
 .grid-container {
@@ -37,6 +38,10 @@ li {
   background-color: var(--primary-color);
   color: #000;
   height: 40px;
+}
+
+.logo {
+  background-color: #000;
 }
 
 .social-icons {
@@ -90,14 +95,14 @@ li {
   width: 10%;
 }
 
-nav ul {
+.nav-items {
   display: flex;
   gap: 20px;
   font-size: 20px;
   align-items: center;
 }
 
-nav ul li a {
+.Section-2 ul li a {
   color: #272a31;
 }
 
@@ -125,10 +130,11 @@ nav ul li a:hover {
 
 .infomation {
   background-color: #fff;
-  width: 90%;
+  width: fit-content;
   align-items: center;
   padding: 20px;
-  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .Section-3 h1 {
@@ -144,15 +150,14 @@ nav ul li a:hover {
   width: 70%;
 }
 
-.under-content {
+/* .under-content {
   width: 80%;
   font-size: 19px;
-}
+} */
 
 .Section-4 {
   width: 100%;
   background-color: var(--primary-color);
-  height: 400px;
 }
 
 .col {
@@ -166,6 +171,9 @@ nav ul li a:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 0 6px;
+  text-align: center;
+  width: 80%;
   color: #fff;
   background-color: rgba(64, 67, 73, 0.9);
 }
@@ -208,7 +216,6 @@ nav ul li a:hover {
   background-color: #fff;
   color: #000;
   width: 100%;
-  height: 700px;
 }
 
 .col-1 {
@@ -255,7 +262,6 @@ nav ul li a:hover {
   width: 100%;
   background-color: rgba(64, 67, 73, 0.9);
   color: #fff;
-  height: 200px;
 }
 
 .image-container {
@@ -270,7 +276,6 @@ nav ul li a:hover {
 
 .Section-7 {
   width: 100%;
-  height: 200px;
   color: #272a31;
   display: flex;
   justify-content: space-around;
@@ -359,6 +364,15 @@ nav ul li a:hover {
 
 /* Mobile  */
 @media only screen and (max-width: 768px) {
+  body {
+    font-family: Lato, Helvetica, sans-serif;
+    min-width: 100px;
+  }
+
+  .under-content {
+    margin-bottom: 20%;
+  }
+
   .Section-1 {
     display: none;
   }
@@ -367,23 +381,84 @@ nav ul li a:hover {
     display: none;
   }
 
+  .Section-4 {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .Professors {
+    max-width: 600px;
+
+    /* margin-top: 20%; */
+    margin: 0 auto;
+  }
+
+  .Content h1 {
+    font-size: 30px;
+    width: 100%;
+    line-height: 40px;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .infomation {
+    width: fit-content;
+    block-size: fit-content;
+    padding: 20px;
+    margin-top: 8%;
+  }
+
   .col {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
-    background-color: #e65642;
   }
 
-  .Section-4 {
+  .row {
+    height: 150px;
+  }
+
+  .row img {
+    width: 10%;
+  }
+
+  .row h4 {
+    color: #e65642;
+    padding: 5px;
+  }
+
+  .Section-3 {
+    background-color: #e65642;
     width: 100%;
-    margin-top: 100%;
-    height: 300px;
   }
 
   .Section-5 {
     width: 100%;
-    margin: 100%;
     height: 300px;
   }
+
+  /* .Professors {
+    margin-top: 110%;
+  } */
+
+  #underline {
+    width: 100%;
+  }
+
+  .below-link {
+    width: 70%;
+  }
+
+  .row p {
+    width: 50%;
+  }
+
+  .row:hover {
+    border: 1px solid #fff;
+  }
+
+  /* Hamburger Menu */
 }

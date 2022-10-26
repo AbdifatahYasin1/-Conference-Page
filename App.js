@@ -61,3 +61,5 @@ function createSpeaker(item) {
 Infomation.forEach((item) => {
   createSpeaker(item);
 });
+
+const header = document.querySelector(".header");
