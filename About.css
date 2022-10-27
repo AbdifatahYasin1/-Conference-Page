@@ -100,10 +100,13 @@ li {
   font-size: 20px;
   align-items: center;
 }
-
-.Section-2 ul li a {
-  color: #272a31;
+.nav-item a {
+  color: #fff;
 }
+
+/* .Section-2 ul li a {
+  color: #272a31;
+} */
 
 nav ul li a:hover {
   color: var(--secondr-color);
@@ -268,12 +271,15 @@ nav ul li a:hover {
     display: none;
   }
 
-  .Section-2 {
+  /* .Section-2 {
     display: none;
-  }
+  } */
 
   .section-3 {
     width: 100%;
+  }
+  .contact {
+    display: none;
   }
 
   .Section-3 h1 {
@@ -328,5 +334,101 @@ nav ul li a:hover {
 
   .Section-7 {
     width: fit-content;
+  }
+}
+
+/* Hanmburger menu */
+header {
+  width: 100%;
+  background-color: #272a31;
+  color: #d3d3d3;
+  display: none;
+}
+
+header li {
+  list-style-type: none;
+}
+header li a {
+  color: white;
+  text-decoration: none;
+}
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.nav-branding {
+  font-size: 2rem;
+}
+
+.nav-link {
+  transition: 0.7s ease;
+  color: #fff;
+}
+
+.nav-link:hover {
+  color: #262626;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: ll 0.3s ease-in-out;
+  background-color: white;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 10%;
+    gap: 0;
+    flex-direction: column;
+    background-color: #262626;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    height: 730px;
+  }
+  .nav-item {
+    margin: 16px 0;
+  }
+  .nav-link {
+    color: #fff;
+  }
+
+  .nav-menu.active {
+    left: 0;
   }
 }
